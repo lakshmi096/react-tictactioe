@@ -1,6 +1,3 @@
-## TIC TAC TOE
-
-This is a simple tic tac toe game build using react.
 <br />
 <p align="center">
   <h3 align="center">TIC TAC TOE</h3>
