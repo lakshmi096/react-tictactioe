@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+body {
+  /* background-color: #000000; */
+  background: linear-gradient(132deg, #ec5218, #1665c1);
+  background-size: 400% 400%;
+  animation: BackgroundGradient 30s ease infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes BackgroundGradient {
+  0% { background-position: 0% 50%;}
+  50% { background-position: 100% 50%;}
+  100% { background-position: 0% 50%;}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box {
+  width: auto;
+  height: 100px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  cursor: pointer; 
+  color: #aca18c;
+}
+.icon {
+  font-size: 35px;
+  color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+ }
+ .ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .75s, opacity 1s;
+ }
+ .ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+ }
+
+ .card{
+  box-shadow: 0px 25px 18px -6px rgba(0,0,0,0.3);
+ }
+
+.empty{
+   background-color: #000000
+}
+ 
+.circle{
+  background-color: #1e2060;
+}
+.cross {
+  background-color: #a23312;;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.turn-text, .text-winner {
+  font-weight: lighter;
+}
+
+.text-winner {
+  color: #154b21 
+}
+
+.player-won {
+  border-radius: 4px;
+   background: linear-gradient(to right, #087908, #4ca2cb) !important;
+   border: none;
+   color: #FFFFFF;
 }
