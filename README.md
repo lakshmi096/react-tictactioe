@@ -9,7 +9,7 @@ This is a simple tic tac toe game build using react.
     This is a simple tic tac toe game build using react, styled with basic html & css.
     <br />
     <br />
-    <a href="https://github.com/github_username/repo">View Demo</a>
+    <a href="http://lakshmi096.github.io/react-tictactioe">View Demo</a>
   </p>
 </p>
 
